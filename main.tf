@@ -1,7 +1,12 @@
-resource "aws_instance" "name" {
+provider "aws" {
+region = "us-east-1"
+}
+
+resource "aws_instance" "example" {
   ami           = "00e801948462f718a"
   instance_type = "t3.micro"
-  tags = {
-    Name = "dev"
+  
+tags = {
+    Name = "shanmuk-instance"
   }
 }
